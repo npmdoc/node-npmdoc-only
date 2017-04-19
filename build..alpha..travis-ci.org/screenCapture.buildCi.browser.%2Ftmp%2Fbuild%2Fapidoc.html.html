@@ -54,12 +54,42 @@
 
     <li class="apidocModuleLi"><a href="#apidoc.module.only">module only</a><ol>
 
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.only.only">
+            function <span class="apidocSignatureSpan"></span>only
+            <span class="apidocSignatureSpan">(obj, keys)</span>
+            </a>
+
+        </li>
+
     </ol></li>
 
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.only" id="apidoc.module.only">module only</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.only.only" id="apidoc.element.only.only">
+        function <span class="apidocSignatureSpan"></span>only
+        <span class="apidocSignatureSpan">(obj, keys)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">only = function (obj, keys){
+  obj = obj || {};
+  if ('string' == typeof keys) keys = keys.split(/ +/);
+  return keys.reduce(function(ret, key){
+    if (null == obj[key]) return ret;
+    ret[key] = obj[key];
+    return ret;
+  }, {});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 </div>
 
